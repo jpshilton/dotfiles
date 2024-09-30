@@ -52,3 +52,5 @@ opt.wrap = true
 opt.linebreak = true
 -- " Show line breaks
 opt.showbreak = "↳"
+-- completely hide the command line when it’s not being used
+opt.cmdheight = 0
