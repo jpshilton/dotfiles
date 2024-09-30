@@ -10,6 +10,7 @@ opt.number = true
 opt.tabstop = 2 -- 2 spaces for tabs (prettier default)
 opt.shiftwidth = 2 -- 2 spaces for indent width
 opt.expandtab = true -- expand tab to spaces
+opt.softtabstop = 2
 opt.autoindent = true -- copy indent from current line when starting new one
 
 opt.wrap = false
@@ -17,13 +18,12 @@ opt.wrap = false
 -- search settings
 opt.ignorecase = true -- ignore case when searching
 opt.smartcase = true -- if you include mixed case in your search, assumes you want case-sensitive
-
 opt.cursorline = true
 
 -- turn on termguicolors for tokyonight colorscheme to work
 -- (have to use iterm2 or any other true color terminal)
 opt.termguicolors = true
-opt.background = "dark" -- colorschemes that can be light or dark will be made dark
+-- opt.background = "dark" -- colorschemes that can be light or dark will be made dark
 opt.signcolumn = "yes" -- show sign column so that text doesn't shift
 
 -- backspace
@@ -41,14 +41,14 @@ opt.swapfile = false
 
 
 -- " Start scrolling when we'are 8 lines aways from borders
-vim.opt.scrolloff = 8
-vim.opt.sidescrolloff = 15
-vim.opt.sidescroll = 5
+opt.scrolloff = 8
+opt.sidescrolloff = 15
+opt.sidescroll = 5
 
 
 -- " Don't wrap lines
-vim.opt.wrap = false
+opt.wrap = true
 -- " Wrap lines at convenient points
-vim.opt.linebreak = false
+opt.linebreak = true
 -- " Show line breaks
-vim.opt.showbreak = "↳"
+opt.showbreak = "↳"

@@ -50,22 +50,6 @@ keymap.set('c', '<C-l>', '<End>')
 keymap.set('c', '<C-f>', '<Right>')
 keymap.set('c', '<C-b>', '<Left>')
 
--- Diagnostic movement
-local diagnostic_goto = function(next, severity)
-	local go = next and vim.diagnostic.goto_next or vim.diagnostic.goto_prev
-	local severity_int = severity and vim.diagnostic.severity[severity] or nil
-	return function()
-		go({ severity = severity_int })
-	end
-end
-keymap.set('n', '<Leader>ce', vim.diagnostic.open_float, { desc = 'Line Diagnostics' })
-keymap.set('n', ']d', diagnostic_goto(true), { desc = 'Next Diagnostic' })
-keymap.set('n', '[d', diagnostic_goto(false), { desc = 'Prev Diagnostic' })
-keymap.set('n', ']e', diagnostic_goto(true, 'ERROR'), { desc = 'Next Error' })
-keymap.set('n', '[e', diagnostic_goto(false, 'ERROR'), { desc = 'Prev Error' })
-keymap.set('n', ']w', diagnostic_goto(true, 'WARN'), { desc = 'Next Warning' })
-keymap.set('n', '[w', diagnostic_goto(false, 'WARN'), { desc = 'Prev Warning' })
-
 -- Move selected line(s) vertically and auto-indent
 keymap.set('n', '<M-Up>', '<cmd>move-2<CR>==', { silent = true, desc = 'Move line up' })
 keymap.set('n', '<M-Down>', '<cmd>move+<CR>==', { silent = true, desc = 'Move line down' })

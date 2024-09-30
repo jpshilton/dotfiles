@@ -17,8 +17,11 @@ require("lazy").setup({
   spec = {
     -- import your plugins
     { import = "plugins" },
-    { import = "plugins.git" },
+    { import = "plugins.keybinding" },
     { import = "plugins.lsp" },
+    { import = "plugins.motion" },
+    { import = "plugins.session" },
+    { import = "plugins.windows" },
   },
   -- automatically check for plugin updates
   checker = {
@@ -29,3 +32,5 @@ require("lazy").setup({
     notify = false
   }
 })
+
+vim.cmd([[hi Normal guibg=NONE ctermbg=NONE]])

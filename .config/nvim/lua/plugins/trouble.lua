@@ -1,6 +1,7 @@
 return {
   "folke/trouble.nvim",
-  opts = {}, -- for default options, refer to the configuration section for custom setup.
+  dependencies = { "nvim-tree/nvim-web-devicons", "folke/todo-comments.nvim" },
+  opts = {},
   cmd = "Trouble",
   keys = {
     {
